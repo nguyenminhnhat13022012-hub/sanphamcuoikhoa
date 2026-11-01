@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Slide 4 - Báo Cáo Thống Kê Tổng Quan</title>
+  <link rel="stylesheet" href="bctk.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <div class="app-wrapper">
+    <!-- HEADER -->
+    <header class="app-header">
+      <div class="brand-logo"><i class="fa-solid fa-wallet"></i> <span>SmartSpend App</span></div>
+      <div class="user-account">
+        <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=100" alt="Avatar">
+        <span class="user-name">Thành Viên Mới</span>
+      </div>
+    </header>
+
+    <!-- LAYOUT -->
+    <div class="main-container">
+      <!-- SIDEBAR -->
+      <aside class="sidebar-menu">
+        <nav class="nav-list">
+          <a href="khoanchi.html" class="nav-link"><i class="fa-solid fa-plus-circle"></i> <span>1. Nhập Chi Tiêu</span></a>
+          <a href="lsgd.html" class="nav-link"><i class="fa-solid fa-list-check"></i> <span>2. Lịch Sử Giao Dịch</span></a>
+          <a href="nshm.html" class="nav-link"><i class="fa-solid fa-chart-pie"></i> <span>3. Ngân Sách Hạn Mức</span></a>
+          <a href="bctk.html" class="nav-link active"><i class="fa-solid fa-chart-column"></i> <span>4. Báo Cáo Thống Kê</span></a>
+        </nav>
+      </aside>
+
+      <!-- CONTENT -->
+      <main class="content-panel">
+        <div class="section-header">
+          <h1>Báo Cáo & Thống Kê Tài Chính</h1>
+          <p>Phân tích tổng quan nguồn thu nhập, chi tiêu và số dư tích lũy theo biểu đồ trực quan.</p>
+        </div>
+
+        <!-- STAT CARDS GRID -->
+        <div class="stat-cards-layout">
+          <div class="stat-box">
+            <div class="stat-icon green"><i class="fa-solid fa-sack-dollar"></i></div>
+            <div class="stat-data">
+              <span>Tổng Thu Nhập</span>
+              <h3>15.000.000 VNĐ</h3>
+            </div>
+          </div>
+
+          <div class="stat-box">
+            <div class="stat-icon red"><i class="fa-solid fa-receipt"></i></div>
+            <div class="stat-data">
+              <span>Tổng Chi Tiêu</span>
+              <h3>6.450.000 VNĐ</h3>
+            </div>
+          </div>
+
+          <div class="stat-box">
+            <div class="stat-icon blue"><i class="fa-solid fa-piggy-bank"></i></div>
+            <div class="stat-data">
+              <span>Số Dư Tích Lũy</span>
+              <h3>8.550.000 VNĐ</h3>
+            </div>
+          </div>
+        </div>
+
+        <!-- CHARTS SECTION -->
+        <div class="charts-grid-layout">
+          <div class="chart-box">
+            <h3>Biểu Đồ So Sánh Chi Tiêu (4 Tháng Gần Nhất)</h3>
+            <div class="bar-chart-container">
+              <div class="column-item">
+                <div class="column-bar" style="height: 60%;"></div>
+                <span>Thg 7</span>
+              </div>
+              <div class="column-item">
+                <div class="column-bar" style="height: 80%;"></div>
+                <span>Thg 8</span>
+              </div>
+              <div class="column-item">
+                <div class="column-bar" style="height: 45%;"></div>
+                <span>Thg 9</span>
+              </div>
+              <div class="column-item">
+                <div class="column-bar active" style="height: 65%;"></div>
+                <span>Thg 10</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="chart-box">
+            <h3>Tỷ Trọng Chi Tiêu Theo Danh Mục</h3>
+            <div class="category-breakdown">
+              <div class="cat-row">
+                <span>🍽️ Ăn uống</span>
+                <strong>28%</strong>
+              </div>
+              <div class="cat-row">
+                <span>🛍️ Mua sắm</span>
+                <strong>39%</strong>
+              </div>
+              <div class="cat-row">
+                <span>🎮 Giải trí</span>
+                <strong>18%</strong>
+              </div>
+              <div class="cat-row">
+                <span>🚗 Di chuyển</span>
+                <strong>15%</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+</body>
+</html>

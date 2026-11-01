@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Slide 1 - Quản Lý Chi Tiêu: Nhập Khoản Giao Dịch</title>
+  <!-- Liên kết tệp CSS định dạng riêng -->
+  <link rel="stylesheet" href="khoanchi.css">
+  <!-- Liên kết bộ icon FontAwesome phổ biến -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- KHUNG BAO QUAN TRỌNG CỦA ỨNG DỤNG -->
+  <div class="app-wrapper">
+
+    <!-- THANH ĐẦU TRANG (HEADER) -->
+    <header class="app-header">
+      <div class="brand-logo">
+        <i class="fa-solid fa-wallet"></i>
+        <span>SmartSpend App</span>
+      </div>
+      <div class="user-account">
+        <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=100" alt="Avatar người dùng">
+        <span class="user-name">Thành Viên Mới</span>
+      </div>
+    </header>
+
+    <!-- KHU VỰC NỘI DUNG CHÍNH (MAIN LAYOUT) -->
+    <div class="main-container">
+
+      <!-- THANH ĐIỀU HƯỚNG BÊN TRÁI (SIDEBAR) -->
+      <aside class="sidebar-menu">
+        <nav class="nav-list">
+          <a href="khoanchi.html" class="nav-link active">
+            <i class="fa-solid fa-plus-circle"></i>
+            <span>1. Nhập Chi Tiêu</span>
+          </a>
+          <a href="lsgd.html" class="nav-link">
+            <i class="fa-solid fa-list-check"></i>
+            <span>2. Lịch Sử Giao Dịch</span>
+          </a>
+          <a href="nshm.html" class="nav-link">
+            <i class="fa-solid fa-chart-pie"></i>
+            <span>3. Ngân Sách Hạn Mức</span>
+          </a>
+          <a href="bctk.html" class="nav-link">
+            <i class="fa-solid fa-chart-column"></i>
+            <span>4. Báo Cáo Thống Kê</span>
+          </a>
+        </nav>
+      </aside>
+
+      <!-- KHU VỰC LÀM VIỆC CHÍNH (CONTENT AREA) -->
+      <main class="content-panel">
+        
+        <!-- TIÊU ĐỀ TRANG -->
+        <div class="section-header">
+          <h1>Tạo Giao Dịch Thu / Chi Mới</h1>
+          <p>Nhập đầy đủ thông tin bên dưới để hệ thống tự động ghi nhận và phân tích tài chính cá nhân cho bạn.</p>
+        </div>
+
+        <!-- THẺ CHỨA FORM NHẬP LIỆU -->
+        <div class="form-card-container">
+          <form class="transaction-input-form" autocomplete="off">
+
+            <!-- LỰA CHỌN LOẠI GIAO DỊCH (THU HAY CHI) -->
+            <div class="type-selection-box">
+              <label class="type-option expense-select active">
+                <input type="radio" name="trans_type" value="expense" checked>
+                <i class="fa-solid fa-arrow-trend-down"></i>
+                <span>Khoản Chi Tiêu</span>
+              </label>
+              <label class="type-option income-select">
+                <input type="radio" name="trans_type" value="income">
+                <i class="fa-solid fa-arrow-trend-up"></i>
+                <span>Khoản Thu Nhập</span>
+              </label>
+            </div>
+
+            <!-- LƯỚI NHẬP LIỆU CHI TIẾT -->
+            <div class="form-grid-layout">
+
+              <!-- Tên khoản chi -->
+              <div class="input-group">
+                <label for="trans-name">
+                  <i class="fa-solid fa-pen-nib"></i> Tên Giao Dịch
+                </label>
+                <input type="text" id="trans-name" placeholder="Ví dụ: Ăn trưa, Đổ xăng xe..." required>
+              </div>
+
+              <!-- Số tiền giao dịch -->
+              <div class="input-group">
+                <label for="trans-amount">
+                  <i class="fa-solid fa-coins"></i> Số Tiền (VNĐ)
+                </label>
+                <input type="number" id="trans-amount" placeholder="Nhập số tiền..." min="0" step="1000" required>
+              </div>
+
+              <!-- Danh mục chi tiêu -->
+              <div class="input-group">
+                <label for="trans-category">
+                  <i class="fa-solid fa-tags"></i> Danh Mục Phân Loại
+                </label>
+                <select id="trans-category">
+                  <option value="">-- Vui lòng chọn danh mục --</option>
+                  <option value="food">🍽️ Ăn Uống & Thực Phẩm</option>
+                  <option value="transport">🚗 Di Chuyển & Xăng Xe</option>
+                  <option value="shopping">🛍️ Mua Sắm Cá Nhân</option>
+                  <option value="bills">💡 Hóa Đơn (Điện, Nước, Net)</option>
+                  <option value="entertainment">🎮 Giải Trí & Thể Thao</option>
+                  <option value="health">💊 Y Tế & Sức Khỏe</option>
+                </select>
+              </div>
+
+              <!-- Ngày thực hiện -->
+              <div class="input-group">
+                <label for="trans-date">
+                  <i class="fa-regular fa-calendar"></i> Ngày Giao Dịch
+                </label>
+                <input type="date" id="trans-date" value="2026-10-25">
+              </div>
+
+              <!-- Ghi chú mở rộng -->
+              <div class="input-group full-row">
+                <label for="trans-note">
+                  <i class="fa-solid fa-note-sticky"></i> Ghi Chú Chi Tiết (Tùy chọn)
+                </label>
+                <textarea id="trans-note" rows="3" placeholder="Nhập thêm thông tin chi tiết về khoản chi này..."></textarea>
+              </div>
+
+            </div>
+
+            <!-- KHU VỰC NÚT BẤM HÀNH ĐỘNG -->
+            <div class="form-action-buttons">
+              <button type="reset" class="btn-custom btn-reset-style">
+                <i class="fa-solid fa-rotate-left"></i> Nhập Lại Từ Đầu
+              </button>
+              <button type="submit" class="btn-custom btn-submit-style">
+                <i class="fa-solid fa-check"></i> Lưu Giao Dịch Ngay
+              </button>
+            </div>
+
+          </form>
+        </div>
+
+      </main>
+
+    </div>
+
+  </div>
+
+</body>
+</html>

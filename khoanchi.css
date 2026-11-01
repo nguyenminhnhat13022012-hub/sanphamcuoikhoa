@@ -1,0 +1,291 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f1f5f9;
+  color: #1e293b;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* ==========================================================
+   2. THANH TIÊU ĐỀ ỨNG DỤNG (HEADER STYLING)
+   ========================================================== */
+.app-header {
+  background-color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 32px;
+  border-bottom: 1px solid #e2e8f0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  width: 100%;
+}
+
+.brand-logo {
+  font-size: 22px;
+  font-weight: 700;
+  color: #2563eb;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand-logo i {
+  font-size: 24px;
+}
+
+.user-account {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 600;
+  font-size: 14px;
+  color: #334155;
+}
+
+.user-account img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #2563eb;
+}
+
+/* ==========================================================
+   3. BỐ CỤC NỘI DUNG CHÍNH (MAIN CONTAINER & SIDEBAR)
+   ========================================================== */
+.main-container {
+  display: flex;
+  flex: 1;
+  width: 100%;
+}
+
+.sidebar-menu {
+  width: 280px;
+  background-color: #ffffff;
+  border-right: 1px solid #e2e8f0;
+  padding: 24px 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 18px;
+  color: #64748b;
+  text-decoration: none;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 14px;
+  transition: all 0.25s ease-in-out;
+}
+
+.nav-link:hover {
+  background-color: #f8fafc;
+  color: #2563eb;
+  transform: translateX(4px);
+}
+
+.nav-link.active {
+  background-color: #eff6ff;
+  color: #2563eb;
+  box-shadow: inset 3px 0 0 #2563eb;
+}
+
+/* ==========================================================
+   4. KHU VỰC LÀM VIỆC VÀ BIỂU MẪU (CONTENT & FORM PANEL)
+   ========================================================== */
+.content-panel {
+  flex: 1;
+  padding: 36px 40px;
+  max-width: 950px;
+}
+
+.section-header {
+  margin-bottom: 28px;
+}
+
+.section-header h1 {
+  font-size: 26px;
+  color: #0f172a;
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+.section-header p {
+  color: #64748b;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.form-card-container {
+  background-color: #ffffff;
+  border-radius: 14px;
+  padding: 32px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+  border: 1px solid #e2e8f0;
+}
+
+/* ==========================================================
+   5. CÁC THÀNH PHẦN CHI TIẾT TRONG FORM (FORM COMPONENTS)
+   ========================================================== */
+.type-selection-box {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 28px;
+  background-color: #f8fafc;
+  padding: 8px;
+  border-radius: 10px;
+  border: 1px solid #e2e8f0;
+}
+
+.type-option {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+  color: #64748b;
+  transition: all 0.2s ease;
+}
+
+.type-option input {
+  display: none;
+}
+
+.type-option.expense-select.active {
+  background-color: #ffffff;
+  color: #dc2626;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+  border: 1px solid #fecaca;
+}
+
+.type-option.income-select.active {
+  background-color: #ffffff;
+  color: #16a34a;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+  border: 1px solid #bbf7d0;
+}
+
+.form-grid-layout {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.input-group.full-row {
+  grid-column: span 2;
+}
+
+.input-group label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #334155;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.input-group label i {
+  color: #2563eb;
+}
+
+.input-group input,
+.input-group select,
+.input-group textarea {
+  padding: 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  font-size: 14px;
+  outline: none;
+  background-color: #ffffff;
+  color: #0f172a;
+  transition: all 0.2s ease-in-out;
+}
+
+.input-group input:focus,
+.input-group select:focus,
+.input-group textarea:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1);
+  background-color: #fff;
+}
+
+/* ==========================================================
+   6. NÚT BẤM HÀNH ĐỘNG (ACTION BUTTONS STYLING)
+   ========================================================== */
+.form-action-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 14px;
+  margin-top: 32px;
+  padding-top: 24px;
+  border-top: 1px solid #f1f5f9;
+}
+
+.btn-custom {
+  padding: 14px 28px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.2s ease;
+}
+
+.btn-reset-style {
+  background-color: #f1f5f9;
+  color: #475569;
+}
+
+.btn-reset-style:hover {
+  background-color: #e2e8f0;
+  color: #1e293b;
+}
+
+.btn-submit-style {
+  background-color: #2563eb;
+  color: #ffffff;
+  box-shadow: 0 4px 10px rgba(37, 99, 235, 0.2);
+}
+
+.btn-submit-style:hover {
+  background-color: #1d4ed8;
+  box-shadow: 0 6px 14px rgba(37, 99, 235, 0.3);
+  transform: translateY(-1px);
+}

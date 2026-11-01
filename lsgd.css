@@ -1,0 +1,58 @@
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+body { background-color: #f1f5f9; color: #1e293b; min-height: 100vh; display: flex; flex-direction: column; }
+.app-wrapper { display: flex; flex-direction: column; min-height: 100vh; width: 100%; }
+
+.app-header { background-color: #ffffff; display: flex; justify-content: space-between; align-items: center; padding: 16px 32px; border-bottom: 1px solid #e2e8f0; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+.brand-logo { font-size: 22px; font-weight: 700; color: #2563eb; display: flex; align-items: center; gap: 12px; }
+.user-account { display: flex; align-items: center; gap: 12px; font-weight: 600; font-size: 14px; color: #334155; }
+.user-account img { width: 40px; height: 40px; border-radius: 50%; object-fit: cover; border: 2px solid #2563eb; }
+
+.main-container { display: flex; flex: 1; width: 100%; }
+.sidebar-menu { width: 280px; background-color: #ffffff; border-right: 1px solid #e2e8f0; padding: 24px 16px; display: flex; flex-direction: column; }
+.nav-list { display: flex; flex-direction: column; gap: 8px; }
+.nav-link { display: flex; align-items: center; gap: 14px; padding: 14px 18px; color: #64748b; text-decoration: none; border-radius: 10px; font-weight: 600; font-size: 14px; transition: all 0.25s; }
+.nav-link:hover { background-color: #f8fafc; color: #2563eb; transform: translateX(4px); }
+.nav-link.active { background-color: #eff6ff; color: #2563eb; box-shadow: inset 3px 0 0 #2563eb; }
+
+.content-panel { flex: 1; padding: 36px 40px; max-width: 1050px; }
+.section-header { margin-bottom: 24px; }
+.section-header h1 { font-size: 26px; color: #0f172a; margin-bottom: 8px; font-weight: 700; }
+.section-header p { color: #64748b; font-size: 14px; line-height: 1.5; }
+
+/* FILTER TOOLBAR */
+.filter-toolbar { display: flex; justify-content: space-between; gap: 16px; margin-bottom: 20px; }
+.search-box { display: flex; align-items: center; gap: 12px; background: #fff; border: 1px solid #cbd5e1; border-radius: 10px; padding: 0 16px; width: 320px; }
+.search-box input { border: none; outline: none; padding: 12px 0; width: 100%; font-size: 14px; background: transparent; }
+.search-box i { color: #94a3b8; }
+.filter-dropdowns { display: flex; gap: 12px; }
+.filter-dropdowns select { border: 1px solid #cbd5e1; background: #fff; border-radius: 10px; padding: 0 14px; font-size: 14px; outline: none; color: #334155; font-weight: 500; cursor: pointer; }
+
+/* TABLE */
+.table-card-container { background-color: #ffffff; border-radius: 14px; border: 1px solid #e2e8f0; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.04); }
+.data-table { width: 100%; border-collapse: collapse; text-align: left; }
+.data-table th { background: #f8fafc; padding: 16px 20px; font-size: 13px; color: #64748b; font-weight: 600; border-bottom: 1px solid #e2e8f0; }
+.data-table td { padding: 18px 20px; border-bottom: 1px solid #f1f5f9; font-size: 14px; color: #334155; }
+.font-bold { font-weight: 600; color: #0f172a; }
+
+.badge { padding: 6px 12px; border-radius: 20px; font-size: 12px; font-weight: 600; display: inline-block; }
+.badge-food { background: #fef3c7; color: #92400e; }
+.badge-income { background: #dcfce7; color: #166534; }
+.badge-transport { background: #e0e7ff; color: #3730a3; }
+.badge-bills { background: #fee2e2; color: #991b1b; }
+
+.type-tag { padding: 4px 10px; border-radius: 6px; font-size: 12px; font-weight: 600; }
+.type-tag.expense { background: #fef2f2; color: #dc2626; }
+.type-tag.income { background: #f0fdf4; color: #16a34a; }
+
+.amount { font-weight: 700; }
+.expense-val { color: #dc2626; }
+.income-val { color: #16a34a; }
+.action-btn { border: none; background: transparent; cursor: pointer; color: #94a3b8; font-size: 16px; padding: 4px 8px; border-radius: 4px; }
+.action-btn:hover { background: #f1f5f9; color: #0f172a; }
+
+/* PAGINATION */
+.pagination-footer { display: flex; justify-content: space-between; align-items: center; padding: 16px 24px; font-size: 13px; color: #64748b; background: #fafafa; border-top: 1px solid #f1f5f9; }
+.page-buttons { display: flex; gap: 6px; }
+.page-buttons button { padding: 6px 12px; border: 1px solid #cbd5e1; background: #fff; border-radius: 6px; cursor: pointer; font-weight: 600; color: #475569; }
+.page-buttons button.active { background: #2563eb; color: #fff; border-color: #2563eb; }
+.page-buttons button:disabled { opacity: 0.5; cursor: not-allowed; }

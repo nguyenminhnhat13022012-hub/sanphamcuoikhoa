@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Slide 3 - Quản Lý Hạn Mức Ngân Sách</title>
+  <link rel="stylesheet" href="nshm.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <div class="app-wrapper">
+    <!-- HEADER -->
+    <header class="app-header">
+      <div class="brand-logo"><i class="fa-solid fa-wallet"></i> <span>SmartSpend App</span></div>
+      <div class="user-account">
+        <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=100" alt="Avatar">
+        <span class="user-name">Thành Viên Mới</span>
+      </div>
+    </header>
+
+    <!-- LAYOUT -->
+    <div class="main-container">
+      <!-- SIDEBAR -->
+      <aside class="sidebar-menu">
+        <nav class="nav-list">
+          <a href="khoanchi.html" class="nav-link"><i class="fa-solid fa-plus-circle"></i> <span>1. Nhập Chi Tiêu</span></a>
+          <a href="lsgd.html" class="nav-link"><i class="fa-solid fa-list-check"></i> <span>2. Lịch Sử Giao Dịch</span></a>
+          <a href="nshm.html" class="nav-link active"><i class="fa-solid fa-chart-pie"></i> <span>3. Ngân Sách Hạn Mức</span></a>
+          <a href="bctk.html" class="nav-link"><i class="fa-solid fa-chart-column"></i> <span>4. Báo Cáo Thống Kê</span></a>
+        </nav>
+      </aside>
+
+      <!-- CONTENT -->
+      <main class="content-panel">
+        <div class="section-header">
+          <h1>Hạn Mức Ngân Sách Tháng 10/2026</h1>
+          <p>Thiết lập giới hạn chi tiêu cho từng danh mục để kiểm soát tài chính hiệu quả hơn.</p>
+        </div>
+
+        <!-- OVERVIEW PROGRESS -->
+        <div class="overview-budget-card">
+          <div class="overview-text">
+            <span>Tổng ngân sách tháng: <strong>10.000.000 VNĐ</strong></span>
+            <span>Đã chi tiêu: <strong class="text-danger">6.450.000 VNĐ (64.5%)</strong></span>
+          </div>
+          <div class="main-progress-bg">
+            <div class="main-progress-fill" style="width: 64.5%;"></div>
+          </div>
+        </div>
+
+        <!-- BUDGET CARDS GRID -->
+        <div class="budget-grid-layout">
+          <!-- Card 1 -->
+          <div class="budget-card">
+            <div class="budget-card-header">
+              <div class="cat-title"><i class="fa-solid fa-utensils"></i> Ăn Uống</div>
+              <span class="status-tag safe">An toàn</span>
+            </div>
+            <div class="budget-card-body">
+              <div class="amount-row">
+                <span>Đã dùng: 1.800.000đ</span>
+                <span>/ 3.000.000đ</span>
+              </div>
+              <div class="progress-bg"><div class="progress-fill blue" style="width: 60%;"></div></div>
+              <p class="card-note">Còn lại 1.200.000 VNĐ trong hạn mức.</p>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="budget-card">
+            <div class="budget-card-header">
+              <div class="cat-title"><i class="fa-solid fa-bag-shopping"></i> Mua Sắm</div>
+              <span class="status-tag warning">Cảnh báo (85%)</span>
+            </div>
+            <div class="budget-card-body">
+              <div class="amount-row">
+                <span>Đã dùng: 2.550.000đ</span>
+                <span>/ 3.000.000đ</span>
+              </div>
+              <div class="progress-bg"><div class="progress-fill orange" style="width: 85%;"></div></div>
+              <p class="card-note text-orange">Bạn sắp chạm ngưỡng tối đa hạn mức!</p>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="budget-card">
+            <div class="budget-card-header">
+              <div class="cat-title"><i class="fa-solid fa-gamepad"></i> Giải Trí</div>
+              <span class="status-tag danger">Vượt hạn mức</span>
+            </div>
+            <div class="budget-card-body">
+              <div class="amount-row">
+                <span>Đã dùng: 1.200.000đ</span>
+                <span>/ 1.000.000đ</span>
+              </div>
+              <div class="progress-bg"><div class="progress-fill red" style="width: 100%;"></div></div>
+              <p class="card-note text-red">Đã chi vượt 200.000 VNĐ kế hoạch!</p>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="budget-card">
+            <div class="budget-card-header">
+              <div class="cat-title"><i class="fa-solid fa-car"></i> Di Chuyển</div>
+              <span class="status-tag safe">An toàn</span>
+            </div>
+            <div class="budget-card-body">
+              <div class="amount-row">
+                <span>Đã dùng: 400.000đ</span>
+                <span>/ 1.500.000đ</span>
+              </div>
+              <div class="progress-bg"><div class="progress-fill green" style="width: 26.6%;"></div></div>
+              <p class="card-note">Ngân sách còn lại rất dồi dào.</p>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+</body>
+</html>
